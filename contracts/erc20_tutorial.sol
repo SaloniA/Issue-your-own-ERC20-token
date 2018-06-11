@@ -1,11 +1,11 @@
 pragma solidity ^0.4.18;
 
 // ----------------------------------------------------------------------------
-// '0Fucks' token contract
+// 'SaloniCoin' token contract
 //
-// Deployed to : 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222
-// Symbol      : 0FUCKS
-// Name        : 0 Fucks Token
+// Deployed to : 0xBA4800e40208258b5A4b7E7405Be64C417635aF6
+// Symbol      : SAL
+// Name        : Saloni Token
 // Total supply: 100000000
 // Decimals    : 18
 //
@@ -16,7 +16,7 @@ pragma solidity ^0.4.18;
 
 
 // ----------------------------------------------------------------------------
-// Safe maths
+// Safe math
 // ----------------------------------------------------------------------------
 contract SafeMath {
     function safeAdd(uint a, uint b) public pure returns (uint c) {
@@ -99,7 +99,7 @@ contract Owned {
 // ERC20 Token, with the addition of symbol, name and decimals and assisted
 // token transfers
 // ----------------------------------------------------------------------------
-contract FucksToken is ERC20Interface, Owned, SafeMath {
+contract SaloniToken is ERC20Interface, Owned, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -112,13 +112,13 @@ contract FucksToken is ERC20Interface, Owned, SafeMath {
     // ------------------------------------------------------------------------
     // Constructor
     // ------------------------------------------------------------------------
-    function FucksToken() public {
-        symbol = "0FUCKS";
-        name = "0 Fucks Token";
+    function SaloniToken() public {
+        symbol = "SAL";
+        name = "Saloni Token";
         decimals = 18;
         _totalSupply = 100000000000000000000000000;
-        balances[0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222] = _totalSupply;
-        Transfer(address(0), 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222, _totalSupply);
+        balances[0xBA4800e40208258b5A4b7E7405Be64C417635aF6] = _totalSupply;
+        Transfer(address(0), 0xBA4800e40208258b5A4b7E7405Be64C417635aF6, _totalSupply);
     }
 
 
